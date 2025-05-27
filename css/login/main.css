@@ -1,0 +1,132 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+}
+
+.home {
+  position: absolute;
+  align-self: flex-start;
+
+  top: 0px;
+  left: 0px;
+  padding: 5px 10px;
+  margin: 10px 0 10px 10px;
+  border-radius: 50px;
+  font-size: 24px;
+  text-decoration: none;
+
+  color: #1e1e2e;
+  background-color: #cba6f7;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.home:hover {
+  color: #cdd6f4;
+  background-color: #313244;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+main fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+  gap: 20px;
+
+  background-color: #181825;
+  border: #11111b 2px solid;
+  border-radius: 10px;
+}
+
+main fieldset legend {
+  padding: 0;
+  margin: 0;
+}
+
+main fieldset input {
+  color: #cdd6f4;
+  background-color: #313244;
+
+  width: 350px;
+  font-size: 24px;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: #11111b 3px solid;
+}
+
+main fieldset input:focus {
+  outline: 2px solid #cba6f7;
+}
+
+main fieldset input::selection {
+  background: #cba6f7;
+  color: #1e1e2e;
+}
+
+main fieldset div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+}
+
+.entrar-registrar {
+  padding: 5px 30px;
+  border-radius: 10px;
+  font-size: 28px;
+  text-decoration: none;
+
+  color: #1e1e2e;
+  background-color: #cba6f7;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.entrar-registrar:hover {
+  transition: background-color 0.5s, color 0.5s;
+
+  color: #cdd6f4;
+  background-color: #313244;
+}
+
+.login-cadastrar {
+  font-size: 20px;
+
+  color: #cdd6f4;
+
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.login-cadastrar:hover {
+  color: #cba6f7;
+
+  transition: background-color 0.5s, color 0.5s;
+}
