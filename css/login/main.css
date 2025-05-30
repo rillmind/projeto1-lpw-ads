@@ -1,8 +1,8 @@
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #303446;
+  color: #c6d0f5;
 }
 
 main {
@@ -29,15 +29,15 @@ main {
   font-size: 24px;
   text-decoration: none;
 
-  color: #1e1e2e;
-  background-color: #cba6f7;
+  color: #303446;
+  background-color: #ca9ee6;
 
   transition: background-color 0.5s, color 0.5s;
 }
 
 .home:hover {
-  color: #cdd6f4;
-  background-color: #313244;
+  color: #c6d0f5;
+  background-color: #414559;
 
   transition: background-color 0.5s, color 0.5s;
 }
@@ -51,8 +51,8 @@ main fieldset {
   padding: 40px;
   gap: 20px;
 
-  background-color: #181825;
-  border: #11111b 2px solid;
+  background-color: #292c3c;
+  border: #232634 2px solid;
   border-radius: 10px;
 }
 
@@ -62,24 +62,24 @@ main fieldset legend {
 }
 
 main fieldset input {
-  color: #cdd6f4;
-  background-color: #313244;
+  color: #c6d0f5;
+  background-color: #414559;
 
   width: 350px;
   font-size: 24px;
   padding: 10px;
 
   border-radius: 10px;
-  border: #11111b 3px solid;
+  border: #232634 3px solid;
 }
 
 main fieldset input:focus {
-  outline: 2px solid #cba6f7;
+  outline: 2px solid #ca9ee6;
 }
 
 main fieldset input::selection {
-  background: #cba6f7;
-  color: #1e1e2e;
+  background: #ca9ee6;
+  color: #303446;
 }
 
 main fieldset div {
@@ -105,7 +105,7 @@ main fieldset div {
   text-decoration: none;
 
   color: #1e1e2e;
-  background-color: #cba6f7;
+  background-color: #ca9ee6;
 
   transition: background-color 0.5s, color 0.5s;
 }
@@ -113,20 +113,20 @@ main fieldset div {
 .entrar-registrar:hover {
   transition: background-color 0.5s, color 0.5s;
 
-  color: #cdd6f4;
+  color: #c6d0f5;
   background-color: #313244;
 }
 
 .login-cadastrar {
   font-size: 20px;
 
-  color: #cdd6f4;
+  color: #c6d0f5;
 
   transition: background-color 0.5s, color 0.5s;
 }
 
 .login-cadastrar:hover {
-  color: #cba6f7;
+  color: #ca9ee6;
 
   transition: background-color 0.5s, color 0.5s;
 }

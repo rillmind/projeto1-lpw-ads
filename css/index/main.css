@@ -1,0 +1,20 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  height: 1500px;
+  width: 100vw;
+}
+
+main img {
+  height: 775px;
+  width: 1825px;
+  margin: 25px 0;
+  border-radius: 15px;
+}
+
+main h1 {
+  color: #cdd6f4;
+}
