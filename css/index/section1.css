@@ -1,21 +1,33 @@
 body {
-  background-color: #303446;
+  background-color: #fff;
 }
-main {
+
+.um {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: center;
+  justify-content: start;
 
-  height: 865px;
+  height: 440px;
   width: 100vw;
 
   background-color: #303446;
 }
 
-main img {
-  height: 825px;
+h1 {
+  font-size: 28px;
+
+  color: #cdd6f4;
+}
+
+.um .halteres {
   width: 1825px;
   margin: 20px;
   border-radius: 15px;
+}
+
+p {
+  font-size: 18px;
+
+  color: #cdd6f4;
 }

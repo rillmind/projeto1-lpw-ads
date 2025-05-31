@@ -1,0 +1,171 @@
+.dois {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  height: 925px;
+
+  background-color: #303446;
+}
+
+.dois h1 {
+  margin: 30px 0 10px 0;
+}
+
+.planos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  margin: 30px 0 0 0;
+}
+
+.plano1,
+.plano2,
+.plano3 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  border: solid 2px #11111b;
+  border-radius: 15px;
+
+  height: 570px;
+  width: 255px;
+  padding: 25px;
+}
+
+.plano1 {
+  background-color: #acb0be;
+}
+
+.plano2,
+.plano3 {
+  background-color: #232634;
+}
+
+.a-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 75px;
+  width: 100%;
+
+  color: #4c4f69;
+}
+
+.planos a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 50px;
+  text-decoration: none;
+
+  color: #c6d0f5;
+
+  background-color: #df8e1d;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.planos a:hover {
+  background-color: #ce831b;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.plano1 h1,
+.plano1 h2,
+.plano1 h4,
+.plano1 h6,
+.plano1 p,
+.plano1 svg {
+  color: #1e1e2e;
+}
+
+.plano2 h1,
+.plano2 h2,
+.plano2 h4,
+.plano2 h6,
+.plano2 p,
+.plano2 svg {
+  color: #c6d0f5;
+}
+
+.plano3 h1,
+.plano3 h2,
+.plano3 h4,
+.plano3 h6,
+.plano3 p,
+.plano3 svg {
+  color: #c6d0f5;
+}
+
+.planos h1 {
+  margin: 0 0;
+}
+
+.planos h2 {
+  margin: 0 0 15px 0;
+}
+
+.planos h6 {
+  margin: 30px 0 0 0;
+}
+
+.planos p {
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.planos svg {
+  height: 22px;
+  width: 22px;
+
+  color: #40a02b;
+}
+
+.rotulo {
+  position: absolute;
+
+  top: 100px;
+  left: 485px;
+  margin-bottom: 20px;
+}
+
+.rotulo p {
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+
+  background-color: #df8e1d;
+}
+
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  height: 20px;
+  margin-top: 10px;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.check svg {
+  height: 30px;
+  width: 30px;
+}
