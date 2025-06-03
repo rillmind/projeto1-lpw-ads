@@ -66,6 +66,7 @@
   font-size: 16px;
   padding: 10px 10px;
   border-radius: 50px;
+
   text-decoration: none;
 
   color: #c6d0f5;
@@ -84,15 +85,17 @@
 .plano1 h1,
 .plano1 h2,
 .plano1 h4,
+.plano1 h5,
 .plano1 h6,
 .plano1 p,
 .plano1 svg {
-  color: #1e1e2e;
+  color: #232634;
 }
 
 .plano2 h1,
 .plano2 h2,
 .plano2 h4,
+.plano2 h5,
 .plano2 h6,
 .plano2 p,
 .plano2 svg {
@@ -102,6 +105,7 @@
 .plano3 h1,
 .plano3 h2,
 .plano3 h4,
+.plano3 h5,
 .plano3 h6,
 .plano3 p,
 .plano3 svg {
@@ -116,6 +120,11 @@
   margin: 0 0 15px 0;
 }
 
+.planos h5 {
+  margin: 10px 0;
+  font-size: 13px;
+}
+
 .planos h6 {
   margin: 30px 0 0 0;
 }
@@ -123,6 +132,8 @@
 .planos p {
   margin: 10px 0;
   font-size: 13px;
+
+  text-decoration: line-through;
 }
 
 .planos svg {
@@ -130,6 +141,10 @@
   width: 22px;
 
   color: #40a02b;
+}
+
+.plano1 svg {
+  color: green;
 }
 
 .rotulo {
@@ -140,11 +155,12 @@
   margin-bottom: 20px;
 }
 
-.rotulo p {
+.rotulo h5 {
   padding: 5px 20px;
   font-size: 14px;
   border-radius: 8px;
 
+  color: #c6d0f5;
   background-color: #df8e1d;
 }
 
@@ -168,4 +184,30 @@
 .check svg {
   height: 30px;
   width: 30px;
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.forbidden {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  height: 20px;
+  margin-top: 10px;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.forbidden svg {
+  height: 30px;
+  width: 30px;
+  max-height: 20px;
+  max-width: 20px;
+
+  color: grey;
+}
+
+.forbidden h4 {
+  text-decoration: line-through;
 }

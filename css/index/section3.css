@@ -1,0 +1,60 @@
+.tres {
+  height: 700px;
+  background-color: #303446;
+}
+.amarela {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 200px;
+  height: 468px;
+  width: 100%;
+  padding-top: 30px;
+
+  background-color: #f9e2af;
+}
+
+.tres h1,
+.tres p {
+  color: #1e1e2e;
+}
+
+.tres h1 {
+  font-size: 30px;
+}
+
+.tres ul {
+  margin: 10px;
+  padding-left: 30px;
+}
+
+.tres li {
+  margin: 5px;
+}
+
+.tres p {
+  margin: 10px;
+}
+
+.tres .app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  height: 400px;
+}
+
+.tres .quadro-amarelo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 280px;
+  width: 530px;
+  border-radius: 10px;
+
+  background-color: #df8e1d;
+}
