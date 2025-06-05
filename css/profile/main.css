@@ -1,0 +1,281 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 1000px;
+  width: 100%;
+
+  background-color: var(--frappe-base);
+}
+
+main .body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 900px;
+  width: 95%;
+
+  color: var(--frappe-text);
+}
+
+main .body .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  gap: 20px;
+  height: 100%;
+  width: 17%;
+  padding: 30px;
+  border-radius: 15px;
+
+  background-color: var(--frappe-mantle);
+}
+
+main .body .user .imagem {
+  overflow: hidden;
+
+  border-radius: 100px;
+
+  border: solid 2px var(--frappe-mauve);
+}
+
+main .body .user h2 {
+  font-size: 28px;
+
+  color: var(--frappe-lavender);
+}
+
+main .body .user p {
+  font-size: 16px;
+
+  color: var(--frappe-lavender);
+}
+
+main .body .user .imagem img {
+  height: 175px;
+  width: 175px;
+}
+
+main .body .user .ancoras {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  gap: 15px;
+  height: 50px;
+  width: 225px;
+  margin: 150px;
+}
+
+main .body .user .ancoras a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  height: 75px;
+  width: 100%;
+  padding: 15px 0 15px 15px;
+  margin: 0;
+  border-radius: 10px;
+  font-size: 18px;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main .body .user .ancoras a:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--frappe-surface0);
+}
+
+main .body .user .ancoras .um {
+  color: var(--frappe-base);
+  background-color: var(--frappe-blue);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main .body .user .ancoras .um:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #6b88cb; /* frappe-blue, mas mais escuro */
+}
+
+main .body .visao-geral {
+  display: flex;
+  flex-direction: column;
+
+  gap: 35px;
+  height: 100%;
+  width: 77%;
+  padding: 30px;
+  padding-top: 0;
+}
+
+main .body .visao-geral .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .body .visao-geral .head .titulo {
+  font-size: 18px;
+
+  color: var(--frappe-green);
+}
+
+main .body .visao-geral .head .botoes {
+  display: flex;
+
+  gap: 10px;
+}
+
+main .body .visao-geral .head .botoes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  font-size: 18px;
+  padding: 5px 20px;
+  border-radius: 8px;
+}
+
+main .body .visao-geral .head .botoes .editar {
+  color: var(--frappe-base);
+  background-color: var(--frappe-blue);
+}
+
+main .body .visao-geral .head .botoes .editar:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--frappe-sky); /* frappe-blue, mas mais escuro */
+}
+
+main .body .visao-geral .head .botoes .ajuda {
+  color: var(--frappe-text);
+  background-color: var(--frappe-surface2);
+}
+
+main .body .visao-geral .head .botoes .ajuda:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--frappe-surface0); /* frappe-blue, mas mais escuro */
+}
+
+main .body .visao-geral h3 {
+  font-size: 22px;
+
+  color: var(--frappe-pink);
+}
+
+main .body .visao-geral .metricas {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  gap: 20px;
+  height: 150px;
+  width: 96%;
+  padding: 30px;
+  border-radius: 15px;
+
+  background-color: var(--frappe-surface0);
+}
+
+main .body .visao-geral .metricas .infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  height: 100px;
+  width: 100%;
+}
+
+main .body .visao-geral .metricas .infos .info {
+  h3 {
+    color: var(--frappe-yellow);
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  height: 100px;
+  width: 400px;
+  border-radius: 10px;
+
+  background-color: var(--frappe-mantle);
+}
+
+main .body .visao-geral .treino {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  gap: 20px;
+  height: 230px;
+  width: 96%;
+  padding: 30px;
+  border-radius: 15px;
+
+  background-color: var(--frappe-surface0);
+}
+
+main .body .visao-geral .treino .editar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  color: var(--frappe-base);
+  background-color: var(--frappe-blue);
+}
+
+main .body .visao-geral .treino .editar:hover {
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--frappe-sky); /* frappe-blue, mas mais escuro */
+}
+
+main .body .visao-geral .atividade-recente {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  gap: 20px;
+  height: 350px;
+  width: 96%;
+  padding: 30px;
+  border-radius: 15px;
+
+  background-color: var(--frappe-surface0);
+}
+
+main .body .visao-geral .atividade-recente .atividades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  gap: 10px;
+  height: 190px;
+  width: 108%;
+}
+
+main .body .visao-geral .atividade-recente .atividades .atividade {
+  width: 90%;
+  padding: 15px;
+  border-radius: 10px;
+
+  border-left: solid 5px var(--frappe-teal);
+  background-color: var(--frappe-mantle);
+}
