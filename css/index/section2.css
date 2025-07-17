@@ -19,6 +19,16 @@
   align-items: center;
 
   gap: 10px;
+  margin: 0px 0 0 0;
+}
+
+.planosj {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  gap: 10px;
   margin: 30px 0 0 0;
 }
 
@@ -148,11 +158,11 @@
 }
 
 .rotulo {
-  position: absolute;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
-  top: 100px;
-  left: 485px;
-  margin-bottom: 20px;
+  margin: 30px 0 0 10px;
 }
 
 .rotulo h5 {

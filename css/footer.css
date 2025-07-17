@@ -3,7 +3,8 @@ footer {
   justify-content: center;
   align-items: center;
 
-  height: 1002px;
+  height: auto;
+  min-height: 200px;
   width: 100%;
 
   color: #cdd6f4;
@@ -11,9 +12,9 @@ footer {
 }
 
 footer .separator {
-  width: 1120px;
+  width: 90vw;
+  max-width: 1120px;
   border-top: solid 1px #cdd6f4;
-  border-width: 100%;
 }
 
 footer .container {
@@ -22,7 +23,8 @@ footer .container {
   align-items: center;
   justify-content: center;
 
-  width: 1100px;
+  width: 90vw;
+  max-width: 1100px;
 }
 
 footer .logo {
@@ -55,23 +57,22 @@ footer .icons {
 
 footer .texts1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 
-  gap: 100px;
+  gap: 40px;
   width: 100%;
   padding: 30px 0;
 }
 
 footer .texts1 h3 {
-  font-size: 18px;
-
-  margin-bottom: 30px;
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 footer .texts1 p {
-  font-size: 14px;
-
+  font-size: 0.95em;
   margin-bottom: 10px;
 }
 
@@ -82,6 +83,29 @@ footer .texts2 {
   justify-content: center;
 
   gap: 20px;
-
   padding: 20px;
+}
+
+@media (max-width: 700px) {
+  footer .container {
+    width: 98vw;
+    max-width: 100vw;
+    padding: 0 1vw;
+  }
+  footer .separator {
+    width: 98vw;
+    max-width: 100vw;
+  }
+  footer .texts1 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0;
+  }
+  footer .logo,
+  footer .icon-text,
+  footer .icons,
+  footer .texts2 {
+    padding: 10px;
+    gap: 10px;
+  }
 }

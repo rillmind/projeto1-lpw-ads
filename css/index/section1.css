@@ -8,26 +8,44 @@ body {
   align-items: center;
   justify-content: start;
 
-  height: 440px;
+  min-height: 300px;
+  height: auto;
   width: 100vw;
 
   background-color: #303446;
 }
 
 h1 {
-  font-size: 28px;
-
+  font-size: 2em;
   color: #cdd6f4;
 }
 
 .um .halteres {
-  width: 1825px;
+  width: 90vw;
+  max-width: 1200px;
   margin: 20px;
   border-radius: 15px;
 }
 
 p {
-  font-size: 18px;
-
+  font-size: 1.1em;
   color: #cdd6f4;
+}
+
+@media (max-width: 700px) {
+  .um {
+    min-height: 200px;
+    padding: 10px 0;
+  }
+  .um .halteres {
+    width: 98vw;
+    max-width: 98vw;
+    margin: 10px 0;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 1em;
+  }
 }
