@@ -3,7 +3,8 @@ main {
   justify-content: center;
   align-items: center;
 
-  height: 1000px;
+  min-height: 100vh;
+  height: auto;
   width: 100%;
 
   background-color: var(--frappe-base);
@@ -11,10 +12,11 @@ main {
 
 main .body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 
-  height: 900px;
+  height: auto;
   width: 95%;
 
   color: var(--frappe-text);
