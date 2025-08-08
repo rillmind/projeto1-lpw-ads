@@ -78,6 +78,10 @@ main .programas2 {
   row-gap: 30px;
 }
 
+main .programas2 {
+  padding: 50px;
+}
+
 main .programa {
   display: flex;
   flex-direction: column;
@@ -137,13 +141,17 @@ main .programa .textos a {
   color: #c6d0f5;
   background-color: #df8e1d;
 
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 main .programa .textos a:hover {
   background-color: #ce831b;
 
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 /* Responsividade para telas menores */

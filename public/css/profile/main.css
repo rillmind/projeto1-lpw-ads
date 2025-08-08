@@ -86,22 +86,30 @@ main .body .user .ancoras a {
   border-radius: 10px;
   font-size: 18px;
 
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 main .body .user .ancoras a:hover {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   background-color: var(--frappe-surface0);
 }
 
 main .body .user .ancoras .um {
   color: var(--frappe-base);
   background-color: var(--frappe-blue);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 main .body .user .ancoras .um:hover {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   background-color: #6b88cb; /* frappe-blue, mas mais escuro */
 }
 
@@ -150,7 +158,9 @@ main .body .visao-geral .head .botoes .editar {
 }
 
 main .body .visao-geral .head .botoes .editar:hover {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   background-color: var(--frappe-sky); /* frappe-blue, mas mais escuro */
 }
 
@@ -160,7 +170,9 @@ main .body .visao-geral .head .botoes .ajuda {
 }
 
 main .body .visao-geral .head .botoes .ajuda:hover {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   background-color: var(--frappe-surface0); /* frappe-blue, mas mais escuro */
 }
 
@@ -179,7 +191,7 @@ main .body .visao-geral .metricas {
   gap: 20px;
   height: 150px;
   width: 96%;
-  padding: 30px;
+  padding: 100px 30px;
   border-radius: 15px;
 
   background-color: var(--frappe-surface0);
@@ -222,7 +234,7 @@ main .body .visao-geral .treino {
   gap: 20px;
   height: 230px;
   width: 96%;
-  padding: 30px;
+  padding: 150px 30px;
   border-radius: 15px;
 
   background-color: var(--frappe-surface0);
@@ -243,7 +255,9 @@ main .body .visao-geral .treino .editar {
 }
 
 main .body .visao-geral .treino .editar:hover {
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   background-color: var(--frappe-sky); /* frappe-blue, mas mais escuro */
 }
 
@@ -256,7 +270,7 @@ main .body .visao-geral .atividade-recente {
   gap: 20px;
   height: 350px;
   width: 96%;
-  padding: 30px;
+  padding: 0px 30px;
   border-radius: 15px;
 
   background-color: var(--frappe-surface0);
