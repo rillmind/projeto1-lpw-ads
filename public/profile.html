@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/profile/main.css" />
+    <title>Perfil</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html">
+          <img src="./img/logo1.png" class="logo1" />
+        </a>
+        <div class="ancoras">
+          <a href="./programs.html">Programas</a>
+          <a
+            href="./login.html"
+            id="logout-button-header"
+            style="color: var(--mocha-yellow); font-weight: bold"
+            >Sair</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="body">
+        <div class="user">
+          <div class="imagem">
+            <img src="./img/box.png" alt="" />
+          </div>
+          <h2 id="user-greeting">Olá, ...</h2>
+          <p id="member-since">Membro desde: ...</p>
+          <div class="ancoras">
+            <a href="#" class="um">Visão Geral</a>
+            <a href="#">Histórico de treinos</a>
+            <a href="#">Mensagens</a>
+            <a href="#">Configurações</a>
+            <a href="#" id="logout-button">Sair</a>
+          </div>
+        </div>
+        <div class="visao-geral">
+          <div class="head">
+            <div class="titulo">
+              <h1>Visão Geral do Perfil</h1>
+            </div>
+            <div class="botoes">
+              <a href="" class="editar"><strong>Editar Perfil</strong></a>
+              <a href="" class="ajuda"><strong>ajuda</strong></a>
+            </div>
+          </div>
+          <div class="metricas">
+            <h3>Suas métricas rápidas</h3>
+            <div class="infos">
+              <div class="info">
+                <p>Peso Atual:</p>
+                <h3 id="current-weight">-- kg</h3>
+              </div>
+              <div class="info">
+                <p>Último Treino:</p>
+                <h3 id="last-workout">--</h3>
+              </div>
+              <div class="info">
+                <p>Calorias Queimadas (Mês)</p>
+                <h3 id="calories-burned">-- kcal</h3>
+              </div>
+              <div class="info">
+                <p>Aulas Comparecidas (Mês)</p>
+                <h3 id="classes-attended">--</h3>
+              </div>
+            </div>
+          </div>
+
+          <div id="next-workout-container" class="treino"></div>
+          <div id="recent-activities-container" class="atividade-recente"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      function handleLogout(event) {
+        event.preventDefault();
+        localStorage.removeItem("ksUserId");
+        alert("Você foi desconectado.");
+        window.location.href = "./index.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        const userId = localStorage.getItem("ksUserId");
+        if (!userId) {
+          alert("Você precisa estar logado para acessar esta página.");
+          window.location.href = "./login.html";
+          return;
+        }
+
+        try {
+          const response = await fetch(
+            `http://localhost:3000/api/profile/${userId}`,
+          );
+          const data = await response.json();
+
+          if (response.ok) {
+            document.getElementById("user-greeting").textContent = `Olá, ${
+              data.name
+            }!`;
+            document.getElementById("member-since").textContent =
+              `Membro desde: ${data.member_since || "Não informado"}`;
+            document.getElementById("current-weight").textContent =
+              data.current_weight ? `${data.current_weight} kg` : "-- kg";
+            document.getElementById("last-workout").textContent =
+              data.last_workout || "--";
+            document.getElementById("calories-burned").textContent =
+              data.calories_burned_month
+                ? `${data.calories_burned_month} kcal`
+                : "-- kcal";
+            document.getElementById("classes-attended").textContent =
+              data.classes_attended_month || "--";
+
+            const nextWorkoutContainer = document.getElementById(
+              "next-workout-container",
+            );
+            if (data.next_workout_name) {
+              nextWorkoutContainer.innerHTML = `
+                <h3>Próximo treino</h3>
+                <h4>${data.next_workout_name}</h4>
+                <p>Dia: ${data.next_workout_day}</p>
+                <p>Horário: ${data.next_workout_time}</p>
+                <p>Professor(a): ${data.next_workout_teacher}</p>
+                <a href="" class="editar"><strong>Ver Detalhes do Treino</strong></a>
+              `;
+            } else {
+              nextWorkoutContainer.innerHTML = `
+                <h3>Próximo treino</h3>
+                <p>Nenhum próximo treino agendado.</p>
+              `;
+            }
+            const recentActivitiesContainer = document.getElementById(
+              "recent-activities-container",
+            );
+            recentActivitiesContainer.innerHTML =
+              "<h3>Atividades Recentes</h3>";
+            const activitiesDiv = document.createElement("div");
+            activitiesDiv.className = "atividades";
+
+            if (data.recent_activities) {
+              try {
+                const activities = JSON.parse(data.recent_activities);
+                if (activities && activities.length > 0) {
+                  activities.forEach((activity) => {
+                    const activityElement = document.createElement("div");
+                    activityElement.className = "atividade";
+                    activityElement.textContent = activity;
+                    activitiesDiv.appendChild(activityElement);
+                  });
+                } else {
+                  activitiesDiv.innerHTML =
+                    "<p>Nenhuma atividade recente encontrada.</p>";
+                }
+              } catch (e) {
+                console.error("Erro ao processar atividades recentes:", e);
+                activitiesDiv.innerHTML =
+                  "<p>Nenhuma atividade recente encontrada.</p>";
+              }
+            } else {
+              activitiesDiv.innerHTML =
+                "<p>Nenhuma atividade recente encontrada.</p>";
+            }
+            recentActivitiesContainer.appendChild(activitiesDiv);
+          } else {
+            alert(`Erro: ${data.error}`);
+            handleLogout({ preventDefault: () => {} });
+          }
+        } catch (error) {
+          console.error("Falha ao carregar dados do perfil:", error);
+          alert("Não foi possível carregar os dados do perfil.");
+        }
+      });
+
+      document
+        .getElementById("logout-button")
+        .addEventListener("click", handleLogout);
+      document
+        .getElementById("logout-button-header")
+        .addEventListener("click", handleLogout);
+    </script>
+  </body>
+</html>
